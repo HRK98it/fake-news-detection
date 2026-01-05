@@ -1,0 +1,1 @@
+print(f'Fake shape= {Fake.shape}\n Real shape={Real.csv}')
