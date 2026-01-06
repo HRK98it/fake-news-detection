@@ -5,7 +5,7 @@ from src.predict import predict_news
 from src.ocr import extract_text_from_image
 from src.video_transcript import extract_text_from_video
 
-# ---------------- PAGE CONFIG ----------------
+
 st.set_page_config(
     page_title="Fake News Detection",
     page_icon="📰",
@@ -24,12 +24,9 @@ st.markdown(
 
 st.divider()
 
-# ---------------- TABS ----------------
+
 tab1, tab2, tab3 = st.tabs(["📝 Text", "🖼️ Image", "🎥 Video"])
 
-# =====================================================
-# 📝 TEXT TAB
-# =====================================================
 with tab1:
     st.subheader("📝 Text News Classification")
 
@@ -51,10 +48,6 @@ with tab1:
             else:
                 st.success(f"✅ REAL NEWS (Confidence: {confidence:.2f})")
 
-
-# =====================================================
-# 🖼️ IMAGE TAB
-# =====================================================
 with tab2:
     st.subheader("🖼️ Image-based News Detection")
 
@@ -87,10 +80,6 @@ with tab2:
                 else:
                     st.success(f"✅ REAL NEWS (Confidence: {confidence:.2f})")
 
-
-# =====================================================
-# 🎥 VIDEO TAB
-# =====================================================
 with tab3:
     st.subheader("🎥 Video-based News Detection")
 
@@ -124,8 +113,6 @@ with tab3:
                 else:
                     st.success(f"✅ REAL NEWS (Confidence: {confidence:.2f})")
 
-
-# ---------------- FOOTER ----------------
 st.divider()
 st.markdown(
     "<p style='text-align:center; color:gray;'>Internship Project • Machine Learning • Fake News Detection</p>",
