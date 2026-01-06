@@ -1,7 +1,7 @@
 import cv2
 import pytesseract
 
-# 🔥 DIRECT TESSERACT PATH (IMPORTANT)
+#DIRECT TESSERACT PATH (IMPORTANT)
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 def extract_text_from_image(image_path: str) -> str:
