@@ -10,7 +10,7 @@ def predict_news(text):
 
     fake_prob = pipeline.predict_proba([text])[0][1]
 
-    # 🔥 STRICT FAKE THRESHOLD
+    # STRICT FAKE THRESHOLD
     if fake_prob >= 0.75:
         return 1, fake_prob        # FAKE
     else:
